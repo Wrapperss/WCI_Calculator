@@ -1,0 +1,14 @@
+platform :ios, '10.0'
+use_frameworks!
+ 
+target ‘WciCalculator’ do
+
+pod 'IGListKit', '~> 3.0'
+
+pod 'SVProgressHUD'
+
+pod 'SnapKit', '~> 4.0.0'
+
+pod 'IQKeyboardManager'
+
+end
