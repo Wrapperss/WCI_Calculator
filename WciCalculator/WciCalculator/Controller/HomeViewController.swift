@@ -112,11 +112,11 @@ extension HomeViewController: HomeCellDelegate {
 extension HomeViewController: ButtonCellDelegate {
     
     func calculatorResult() -> Double {
-        let o = 0.85 * log(data[0] + 1) + 0.15 * log(data[1] + 1)
-        let a = 0.85 * log(data[2] + 1) + 0.15 * log(data[3] + 1)
-        let h = 0.85 * log(data[4] + 1) + 0.15 * log(data[5] + 1)
-        let p = 0.85 * log(data[6] + 1) + 0.15 * log(data[7] + 1)
-        return (o + a + h) * 0.3 + 0.1 * p
+        let o = 0.85 * log(data[0] + 1) + 0.15 * log(data[1] * 10 + 1)
+        let a = 0.85 * log(data[2] + 1) + 0.15 * log(data[3] * 10 + 1)
+        let h = 0.85 * log(data[4] + 1) + 0.15 * log(data[5] * 10 + 1)
+        let p = 0.85 * log(data[6] + 1) + 0.15 * log(data[7] * 10 + 1)
+        return pow(((o + a + h) * 0.3 + 0.1 * p), 2)
     }
     
     func getResult() {
